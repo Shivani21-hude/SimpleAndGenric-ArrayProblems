@@ -12,9 +12,10 @@ namespace PracticeProblems
         {
             while (true)
             {
-                Console.WriteLine("Select given option : \n 1) Delete array elements using int ,double,char " +
+                Console.WriteLine("\n Select given option : \n 1) Delete array elements using int ,double,char " +
                     "\n 2) Delete array elements using generics method  " +
-                    "\n 3) Delete array elements using generic class");
+                    "\n 3) Delete array elements using generic class" +
+                    "\n 4) Find minimum integer number from 3 numbers");
                 int select = Convert.ToInt32(Console.ReadLine());
                 switch (select)
                 {
@@ -197,6 +198,11 @@ namespace PracticeProblems
                                 deleteelement2.DeleteElement();
                                 break;
                         }
+                        break;
+
+                    case 4:
+
+                        FindMinimumInteger.MinimumInteger();
                         break;
 
                 
