@@ -16,7 +16,8 @@ namespace PracticeProblems
                     "\n 2) Delete array elements using generics method  " +
                     "\n 3) Delete array elements using generic class" +
                     "\n 4) Find minimum integer number from 3 numbers" +
-                    "\n 5) Find minimum float value from 3 value ");
+                    "\n 5) Find minimum float value from 3 value" +
+                    "\n 6)  Find minimum string from 3 strings");
                 int select = Convert.ToInt32(Console.ReadLine());
                 switch (select)
                 {
@@ -209,6 +210,11 @@ namespace PracticeProblems
                     case 5:
 
                         MinimumFloatValue.MiminumFloat();
+                        break;
+
+                    case 6:
+
+                        FindMinimumChar.MinimumChar();
                         break;
 
                 
