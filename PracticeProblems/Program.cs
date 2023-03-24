@@ -13,7 +13,8 @@ namespace PracticeProblems
             while (true)
             {
                 Console.WriteLine("Select given option : \n 1) Delete array elements using int ,double,char " +
-                    "\n 2) Delete array elements using generics  ");
+                    "\n 2) Delete array elements using generics method  " +
+                    "\n 3) Delete array elements using generic class");
                 int select = Convert.ToInt32(Console.ReadLine());
                 switch (select)
                 {
@@ -139,6 +140,65 @@ namespace PracticeProblems
                                 break;
                         }
                         break;
+                    case 3:
+
+                        Console.WriteLine("\n Select from given options : \n 1) Delete int array element" +
+                           "\n 2) Delete double element \n 3) Delete char element ");
+                        int genericOption1 = Convert.ToInt32(Console.ReadLine());
+                        
+                        Console.WriteLine("How many elements you want to add into array : ");
+                        int genericsize1 = Convert.ToInt32(Console.ReadLine());
+                        int[] intArray1 = new int[genericsize1];
+                        double[] doubleArray1 = new double[genericsize1];
+                        char[] charArray1 = new char[genericsize1];
+
+                        switch (genericOption1)
+                        {
+
+                            case 1:
+                                Console.WriteLine("Enter the int elements 1 by 1 : ");
+                                for (int i = 0; i < genericsize1; i++)
+                                {
+                                    intArray1[i] = Convert.ToInt32(Console.ReadLine());
+                                }
+                                Console.WriteLine("\n please pickup any one element that you want to delete ");
+                                int delete3 = Convert.ToInt32(Console.ReadLine());
+
+                                GenericClass<int> deleteelement1 = new GenericClass<int>(intArray1, delete3);
+                                deleteelement1.DeleteElement();
+                                break;
+
+                            case 2:
+                                Console.WriteLine("Enter the double elements 1 by 1 : ");
+                                for (int i = 0; i < genericsize1; i++)
+                                {
+                                    doubleArray1[i] = Convert.ToDouble(Console.ReadLine());
+                                }
+
+                                Console.WriteLine("\n please pickup any one element that you want to delete ");
+                                double delete4 = Convert.ToDouble(Console.ReadLine());
+
+                                GenericClass<double> deleteelement = new GenericClass<double>(doubleArray1, delete4);
+                                deleteelement.DeleteElement();
+                               
+                                break;
+
+                            case 3:
+                                Console.WriteLine("Enter the letters 1 by 1 : ");
+                                for (int i = 0; i < charArray1.Length; i++)
+                                {
+                                    charArray1[i] = Convert.ToChar(Console.ReadLine());
+                                }
+
+                                Console.WriteLine("\n please pickup any one element that you want to delete ");
+                                char delete5 = Convert.ToChar(Console.ReadLine());
+
+                                GenericClass<char> deleteelement2 = new GenericClass<char>(charArray1, delete5);
+                                deleteelement2.DeleteElement();
+                                break;
+                        }
+                        break;
+
                 
                 }
             
