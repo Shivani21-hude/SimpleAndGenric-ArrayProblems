@@ -11,7 +11,7 @@ namespace PracticeProblems
         public static void MinimumChar()
         {
             Console.WriteLine("Find minimum char value from 3 values ----");
-            Console.WriteLine("Enter 3 float values : ");
+            Console.WriteLine("Enter 3 strings : ");
             string FirstValue =Console.ReadLine();
             string SecondValue = Console.ReadLine();
             string ThirdValue = Console.ReadLine();

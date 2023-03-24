@@ -17,7 +17,8 @@ namespace PracticeProblems
                     "\n 3) Delete array elements using generic class" +
                     "\n 4) Find minimum integer number from 3 numbers" +
                     "\n 5) Find minimum float value from 3 value" +
-                    "\n 6)  Find minimum string from 3 strings");
+                    "\n 6)  Find minimum string from 3 strings" +
+                    "\n 7) Find miminum int,double,string values using generic method and Icomparable");
                 int select = Convert.ToInt32(Console.ReadLine());
                 switch (select)
                 {
@@ -97,7 +98,7 @@ namespace PracticeProblems
                         int genericsize = Convert.ToInt32(Console.ReadLine());
                         int[] intArray = new int[genericsize];
                         double[] doubleArray = new double[genericsize];
-                        char[] charArray = new char[genericsize];   
+                        char[] charArray = new char[genericsize];
 
 
                         switch (genericOption)
@@ -109,14 +110,14 @@ namespace PracticeProblems
                                 {
                                     intArray[i] = Convert.ToInt32(Console.ReadLine());
                                 }
-                               Console.WriteLine("\n please pickup any one element that you want to delete ");
+                                Console.WriteLine("\n please pickup any one element that you want to delete ");
                                 int delete3 = Convert.ToInt32(Console.ReadLine());
-                               
+
                                 GenericMethod.DeleteElement<int>(intArray, delete3);
                                 break;
 
                             case 2:
- 
+
                                 Console.WriteLine("Enter the double elements 1 by 1 : ");
                                 for (int i = 0; i < genericsize; i++)
                                 {
@@ -125,7 +126,7 @@ namespace PracticeProblems
 
                                 Console.WriteLine("\n please pickup any one element that you want to delete ");
                                 double delete4 = Convert.ToDouble(Console.ReadLine());
-                               
+
                                 GenericMethod.DeleteElement<double>(doubleArray, delete4);
                                 break;
 
@@ -148,7 +149,7 @@ namespace PracticeProblems
                         Console.WriteLine("\n Select from given options : \n 1) Delete int array element" +
                            "\n 2) Delete double element \n 3) Delete char element ");
                         int genericOption1 = Convert.ToInt32(Console.ReadLine());
-                        
+
                         Console.WriteLine("How many elements you want to add into array : ");
                         int genericsize1 = Convert.ToInt32(Console.ReadLine());
                         int[] intArray1 = new int[genericsize1];
@@ -183,7 +184,7 @@ namespace PracticeProblems
 
                                 GenericClass<double> deleteelement = new GenericClass<double>(doubleArray1, delete4);
                                 deleteelement.DeleteElement();
-                               
+
                                 break;
 
                             case 3:
@@ -217,7 +218,43 @@ namespace PracticeProblems
                         FindMinimumChar.MinimumChar();
                         break;
 
-                
+                    case 7:
+
+                        Console.WriteLine("\n Select from given options :\n 1) To find minimum int value between 3 numbers" +
+                            "\n 2) To Find minimum double number from 3 numbers" +
+                            "\n 3) Find minimum string from 3 strings ");
+                        int option1 = Convert.ToInt32(Console.ReadLine());
+
+                        switch (option1)
+                        {
+                            case 1:
+                                Console.WriteLine("Find minimum integer number from 3 numbers ----");
+                                Console.WriteLine("Enter 3 int values : ");
+                                int FirstValue = Convert.ToInt32(Console.ReadLine());
+                                int SecondValue = Convert.ToInt32(Console.ReadLine());
+                                int ThirdValue = Convert.ToInt32(Console.ReadLine());
+                                FindMinimumUsingGeneric.MinimumValue<int>(FirstValue, SecondValue, ThirdValue);
+                                break;
+
+                            case 2:
+                                Console.WriteLine("Find minimum double number from 3 numbers ----");
+                                Console.WriteLine("Enter 3 double values : ");
+                                double FirstValue1 = Convert.ToDouble(Console.ReadLine());
+                                double SecondValue1 = Convert.ToDouble(Console.ReadLine());
+                                double ThirdValue1 = Convert.ToDouble(Console.ReadLine());
+                                FindMinimumUsingGeneric.MinimumValue<double>(FirstValue1, SecondValue1, ThirdValue1);
+                                break;
+
+                            case 3:
+                                Console.WriteLine("Find minimum string from 3 strings ----");
+                                Console.WriteLine("Enter 3 strings : ");
+                                string FirstValue2 = Console.ReadLine();
+                                string SecondValue2 = Console.ReadLine();
+                                string ThirdValue2 = Console.ReadLine();
+                                FindMinimumUsingGeneric.MinimumValue<string>(FirstValue2, SecondValue2, ThirdValue2);
+                                break;
+                        }
+                        break;
                 }
             
             }
