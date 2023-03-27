@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,8 @@ namespace PracticeProblems
                     "\n 4) Find minimum integer number from 3 numbers" +
                     "\n 5) Find minimum float value from 3 value" +
                     "\n 6)  Find minimum string from 3 strings" +
-                    "\n 7) Find miminum int,double,string values using generic method and Icomparable");
+                    "\n 7) Find miminum int,double,string values using generic method and Icomparable" +
+                    "\n 8) Find miminum int,double,string values using generic class and Icomparable");
                 int select = Convert.ToInt32(Console.ReadLine());
                 switch (select)
                 {
@@ -255,8 +257,44 @@ namespace PracticeProblems
                                 break;
                         }
                         break;
+
+                    case 8:
+                        Console.WriteLine("\n --Using generic class-- \n Select from given options :\n 1) To find minimum int value between 3 numbers" +
+                          "\n 2) To Find minimum double number from 3 numbers" +
+                          "\n 3) Find minimum string from 3 strings ");
+                        int option2 = Convert.ToInt32(Console.ReadLine());
+
+                        switch (option2)
+                        {
+                            case 1:
+                                Console.WriteLine("Find minimum integer number from 3 numbers ----");
+                                Console.WriteLine("Enter 3 int values : ");
+                                int FirstValue3 = Convert.ToInt32(Console.ReadLine());
+                                int SecondValue3 = Convert.ToInt32(Console.ReadLine());
+                                int ThirdValue3 = Convert.ToInt32(Console.ReadLine());
+                                FindMinimumUsingGeneric.MinimumValue<int>(FirstValue3, SecondValue3, ThirdValue3);
+                                break;
+
+                            case 2:
+                                Console.WriteLine("Find minimum double number from 3 numbers ----");
+                                Console.WriteLine("Enter 3 double values : ");
+                                double FirstValue4 = Convert.ToDouble(Console.ReadLine());
+                                double SecondValue4 = Convert.ToDouble(Console.ReadLine());
+                                double ThirdValue4 = Convert.ToDouble(Console.ReadLine());
+                                FindMinimumUsingGeneric.MinimumValue<double>(FirstValue4, SecondValue4, ThirdValue4);
+                                break;
+
+                            case 3:
+                                Console.WriteLine("Find minimum strings  from 3 strings ----");
+                                Console.WriteLine("Enter 3 strings : ");
+                                string FirstValue5 = Console.ReadLine();
+                                string SecondValue5 = Console.ReadLine();
+                                string ThirdValue5 = Console.ReadLine();
+                                FindMinimumUsingGeneric.MinimumValue<string>(FirstValue5, SecondValue5, ThirdValue5);
+                                break;
+                        }
+                        break;
                 }
-            
             }
         }
     }

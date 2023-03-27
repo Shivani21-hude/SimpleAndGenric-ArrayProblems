@@ -8,7 +8,7 @@ namespace PracticeProblems
 {
     internal class GenericClass<T>
     {
-        public T[] arr;
+        public T[] arr; //delete array element
         public T delete;
         public GenericClass(T[] arr, T delete)
         {
